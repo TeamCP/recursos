@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Recursos - Catálogo 2.0 Umine (Y2K Edition)</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: VT323 (Pixel Font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for the Y2K/Retro OS theme */
+        body {
+            font-family: 'VT323', monospace;
+            background: #008080; /* Classic teal background */
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .window {
+            background: #C0C0C0; /* Classic UI grey */
+            border-top: 2px solid #FFFFFF;
+            border-left: 2px solid #FFFFFF;
+            border-right: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .title-bar {
+            background: linear-gradient(to right, #000080, #1084d0); /* Classic blue title bar */
+            color: #FFFFFF;
+            padding: 4px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+        }
+        
+        .title-bar-buttons span {
+            background: #C0C0C0;
+            border-top: 1px solid #FFFFFF;
+            border-left: 1px solid #FFFFFF;
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            padding: 0px 4px;
+            margin-left: 3px;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .window-content {
+            padding: 2rem;
+        }
+
+        .card {
+            background: #C0C0C0;
+            border-top: 2px solid #FFFFFF;
+            border-left: 2px solid #FFFFFF;
+            border-right: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            transition: background-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .card:hover {
+             background-color: #d1d1d1;
+             cursor: pointer;
+        }
+
+        .main-title {
+            color: #FF4F00; /* Umine Orange */
+            text-shadow: 2px 2px #000;
+        }
+        
+        .section-title {
+            background: #C0C0C0;
+            padding: 5px;
+            border-bottom: 2px solid #000;
+            border-right: 2px solid #000;
+        }
+        
+        .status-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #C0C0C0;
+            border-top: 2px solid #FFFFFF;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .start-button {
+            background: #C0C0C0;
+            border-top: 2px solid #FFFFFF;
+            border-left: 2px solid #FFFFFF;
+            border-right: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            padding: 2px 12px;
+            font-weight: bold;
+        }
+
+        .start-button:active {
+            border-top: 2px solid #000000;
+            border-left: 2px solid #000000;
+            border-right: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+        }
+
+        /* Style for the modal */
+        #videoModal {
+            background-color: rgba(0, 0, 0, 0.85);
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            aspect-ratio: 16 / 9;
+            width: 90%;
+            max-width: 1200px;
+            border-top: 2px solid #FFFFFF;
+            border-left: 2px solid #FFFFFF;
+            border-right: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Main Window -->
+        <div class="window mb-8">
+            <div class="title-bar">
+                <span>C:\UMINE\RECURSOS_V3.EXE</span>
+                 <div class="title-bar-buttons">
+                    <span>_</span><span>&#9723;</span><span>X</span>
+                </div>
+            </div>
+            <div class="window-content text-center">
+                 <h1 class="text-4xl md:text-5xl font-bold uppercase main-title">Repositorio de Recursos</h1>
+                 <h2 class="text-2xl md:text-4xl font-normal mt-2">Catalogo 2.0 Umine</h2>
+                 <p class="mt-4 text-lg">// Junio 2025 - Febrero 2026</p>
+            </div>
+        </div>
+        
+        <!-- Quality Standards Window -->
+         <div class="window mb-12">
+            <div class="title-bar">
+                <span>Propiedades: Estandar de Calidad</span>
+            </div>
+            <div class="window-content">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="card p-4"><h4 class="font-bold text-xl mb-2 text-blue-800">Duracion</h4><p>1-3 min</p></div>
+                    <div class="card p-4"><h4 class="font-bold text-xl mb-2 text-blue-800">Estilo</h4><p>Mograph</p></div>
+                    <div class="card p-4"><h4 class="font-bold text-xl mb-2 text-blue-800">Narrativa</h4><p>Storytelling</p></div>
+                    <div class="card p-4"><h4 class="font-bold text-xl mb-2 text-blue-800">Edicion</h4><p>Fluida</p></div>
+                    <div class="card p-4"><h4 class="font-bold text-xl mb-2 text-blue-800">Eficiencia</h4><p>&lt;2 Semanas</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- References Section -->
+        <section id="referencias">
+            <h3 class="text-2xl font-bold mb-6 section-title">📁 Directorio de Referencias</h3>
+
+            <!-- Branding AV Umine -->
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-4">C:\Umine\Branding_AV</h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7336352446312501249?compact=1" target="_blank" class="card"><h5 class="font-bold">🔗 DoorDash.url</h5><p class="text-sm">Plataforma: LinkedIn</p></a>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/XtQ5sGkICzk"><h5 class="font-bold">📄 Rex.mp4</h5><p class="text-sm">Plataforma: YouTube</p></div>
+                </div>
+            </div>
+            
+            <!-- Recursos Visuales -->
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-4">C:\Umine\Recursos_Visuales</h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7271855146383417345" target="_blank" class="card"><h5 class="font-bold">🔗 Cartel.url</h5><p class="text-sm">Plataforma: LinkedIn</p></a>
+                    <a href="https://www.instagram.com/p/DJnTXFzvF5n/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_1.url</h5></a>
+                    <a href="https://www.instagram.com/reel/DJb9wH2RhM7/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_2.url</h5></a>
+                    <a href="https://www.instagram.com/p/DICOtjrJWQl/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_3.url</h5></a>
+                    <a href="https://www.instagram.com/p/DINZHA1TDvw/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_4.url</h5></a>
+                    <a href="https://www.instagram.com/p/DHI2Bfpon7-/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_5.url</h5></a>
+                    <a href="https://www.instagram.com/reel/DKiNQg9Steu/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_6.url</h5></a>
+                    <a href="https://www.instagram.com/p/DJAUFjqyUEL/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_7.url</h5></a>
+                    <a href="https://www.linkedin.com/posts/the-school-of-life-for-business_most-businesses-run-into-trouble-not-through-activity-7237142704139210752-ahB_" target="_blank" class="card"><h5 class="font-bold">🔗 SchoolOfLife.url</h5><p class="text-sm">Plataforma: LinkedIn</p></a>
+                    <a href="https://www.tiktok.com/@haileysani" target="_blank" class="card"><h5 class="font-bold">🔗 HaileySani.url</h5><p class="text-sm">Plataforma: TikTok</p></a>
+                    <a href="https://www.instagram.com/p/DKkEoGoxw9f/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_8.url</h5></a>
+                    <a href="https://www.tiktok.com/@nutrivonnee/video/7500301254665538824" target="_blank" class="card"><h5 class="font-bold">🔗 Nutrivonnee.url</h5><p class="text-sm">Plataforma: TikTok</p></a>
+                    <a href="https://www.instagram.com/reel/DJwfJ-KOdF_/?igsh=MWE2Mjg4YXY0ZmR2eQ==" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_9.url</h5></a>
+                    <a href="https://www.instagram.com/p/DIynNOoR7In/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_10.url</h5></a>
+                    <a href="https://www.instagram.com/p/DGyBT_mxD_t/" target="_blank" class="card"><h5 class="font-bold">🔗 Instagram_11.url</h5></a>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/ObL2xm5NrCk"><h5 class="font-bold">📄 Cheap_Streaming.mov</h5></div>
+                    <div class="card" data-video-src="https://player.vimeo.com/video/687915461"><h5 class="font-bold">📄 Wix_Launch.mp4</h5><p class="text-sm">Plataforma: Vimeo</p></div>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/wUPUPIpYMtE"><h5 class="font-bold">📄 Comida_Cuba.mp4</h5></div>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/m6KnVTYtSc0"><h5 class="font-bold">📄 Fentanyl.mov</h5></div>
+                    <a href="https://www.youtube.com/playlist?list=PLJicmE8fK0EjW2AVwcSc4NvGyJJaw7bzh" target="_blank" class="card"><h5 class="font-bold">▶️ Myths_Playlist.pls</h5></a>
+                </div>
+            </div>
+
+            <!-- Recursos Narrativos -->
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-4">C:\Umine\Recursos_Narrativos</h4>
+                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <a href="https://www.instagram.com/p/DKIX4dGoceS/" target="_blank" class="card"><h5 class="font-bold">🔗 Ideas_Enganche.url</h5></a>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/rz4Dd11_fX0"><h5 class="font-bold">📄 Tabla_Periodica.mp3</h5></div>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/FgyEljQ0cr4"><h5 class="font-bold">📄 Crash_Course.avi</h5></div>
+                    <div class="card" data-video-src="https://www.youtube.com/embed/vmwY8zUmw18"><h5 class="font-bold">📄 Green_Glass.mp4</h5></div>
+                    <a href="https://www.tiktok.com/creator-academy/es/article/captivating-content-with-great-storytelling" target="_blank" class="card"><h5 class="font-bold">🔗 TikTok_Story.url</h5><p class="text-sm">Plataforma: TikTok</p></a>
+                </div>
+            </div>
+            
+            <!-- Optimización de Workflow -->
+            <div class="mb-12">
+                <h4 class="text-xl font-bold mb-4">C:\Umine\Workflow</h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                     <a href="https://www.instagram.com/p/DHsJ43ogsp4/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_AV_1.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DHZni39NPyJ/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_DI_1.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DF5Lm0ot00d/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_DI_2.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DHJBBS4NTWv/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_DI_3.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DKqzliOt95F/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_AV_2.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DIcIOboSRj_/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_AV_3.url</h5></a>
+                     <a href="https://www.instagram.com/reel/DKDiKbItEXa/" target="_blank" class="card"><h5 class="font-bold">🔗 Workflow_AV_4.url</h5></a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 items-center justify-center hidden" role="dialog" aria-modal="true">
+        <div class="modal-content relative bg-black">
+            <div class="title-bar">
+                <span>Reproduciendo video...</span>
+                 <div id="closeModal" class="title-bar-buttons cursor-pointer">
+                    <span>X</span>
+                </div>
+            </div>
+            <iframe id="videoPlayer" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <button class="start-button">▶ Umine</button>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoModal = document.getElementById('videoModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            const videoPlayer = document.getElementById('videoPlayer');
+            const cardsWithVideo = document.querySelectorAll('[data-video-src]');
+
+            cardsWithVideo.forEach(card => {
+                card.addEventListener('click', () => {
+                    const videoSrc = card.dataset.videoSrc;
+                    if (videoSrc) {
+                        videoPlayer.src = `${videoSrc}?autoplay=1&modestbranding=1&rel=0`;
+                        videoModal.classList.remove('hidden');
+                        videoModal.classList.add('flex');
+                    }
+                });
+            });
+
+            const closePlayer = () => {
+                videoModal.classList.add('hidden');
+                videoModal.classList.remove('flex');
+                videoPlayer.src = '';
+            }
+
+            closeModalBtn.addEventListener('click', closePlayer);
+            
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                    closePlayer();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
